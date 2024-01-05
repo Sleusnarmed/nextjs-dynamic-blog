@@ -1,19 +1,25 @@
 "use client"
 
-import React, { useContext, useEffect, useState } from 'react'
-import { ThemeContext } from '../context/ThemeContext'
+// Utilizes the useContext hook to access the theme information.
+import React, { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const ThemeProvider = ({children}) => {
-    const {theme} = useContext(ThemeContext)
-    const [mounted, setMounted] = useState(false)
+    // Access the current theme from the ThemeContext using useContext.
+    const { theme } = useContext(ThemeContext);
 
-    useEffect(()=>{
-        setMounted(true)
-    }, [])
+    // State to track whether the component is mounted.
+    const [mounted, setMounted] = useState(false);
 
-    if (mounted){
-        return <div className={theme}>{children}</div> 
+    // useEffect to set the mounted state to true after component mount.
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // Render conditionally based on the mounted state.
+    if (mounted) {
+        return <div className={theme}>{children}</div>;
     }
-}
+};
 
-export default ThemeProvider
+export default ThemeProvider;

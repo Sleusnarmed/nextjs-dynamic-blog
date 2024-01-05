@@ -8,7 +8,7 @@ import AuthLinks from '../authLinks/AuthLinks'
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.socials}>
+      <div className={styles.social}>
         <Image src="/facebook.png" alt="facebook" width={24} height={24}/>
         <Image src="/instagram.png" alt="instagram" width={24} height={24}/>
         <Image src="/twitter.png" alt="twitter" width={24} height={24}/>
@@ -17,9 +17,9 @@ const Navbar = () => {
       <div className={styles.logo}>Blog App</div>
       <div className={styles.links}>
         <ThemeToggle/>
-        <Link href='/'>Homepage</Link>
-        <Link href='/'>Contact</Link>
-        <Link href='/'>About</Link>
+        <Link href='/' className={styles.link}>Homepage</Link>
+        <Link href='/' className={styles.link}>Contact</Link>
+        <Link href='/' className={styles.link}>About</Link>
         <AuthLinks/>
       </div>
         
