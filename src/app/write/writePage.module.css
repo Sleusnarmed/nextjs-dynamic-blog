@@ -1,4 +1,5 @@
 .container{
+    
 }
 
 .editor{
@@ -14,6 +15,7 @@
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid var(--textColor);
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
