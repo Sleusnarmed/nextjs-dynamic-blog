@@ -13,7 +13,6 @@ const WritePage = () => {
   const { status } = useSession();
 
   const router = useRouter()
-  console.log(data, status);
   
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
